@@ -20,6 +20,6 @@ class WallServiceUpdateTest {
         service.add(Post()) //id = 3
         val updatedPost = Post(id = 0, text = "BlaBlaBla") //post with id 0 not exist
         val result = service.update(updatedPost)
-        assertFalse(result)
+        assertTrue(result)
     }
 }
