@@ -1,12 +1,11 @@
 package attachments
 import attachments.mediaTypes.*
 
-interface Attachment {
-    val type:String
-}
-data class AudioAttachment(val audio: Audio, override val type: String = "Audio"):Attachment
-data class DocAttachment(val document: Document, override val type: String = "Document"):Attachment
-data class PhotoAttachment(val photo: Photo, override val type: String = "Photo"):Attachment
-data class PageAttachment(val page: Page, override val type: String = "Page"):Attachment
-data class VideoAttachment(val video: Video, override val type: String = "Video"):Attachment
+sealed class Attachment (val type:String)
+
+data class AudioAttachment(val audio: Audio):Attachment("Audio")
+data class DocAttachment(val document: Document):Attachment("Document")
+data class PhotoAttachment(val photo: Photo):Attachment("Photo")
+data class PageAttachment(val page: Page):Attachment("Page")
+data class VideoAttachment(val video: Video):Attachment("Video")
 
