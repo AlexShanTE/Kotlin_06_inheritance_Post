@@ -1,6 +1,6 @@
 
 object WallService {
-    private var postArray: Array<Post> = emptyArray<Post>()
+    var postArray: Array<Post> = emptyArray<Post>()
     private var id = 1
 
     fun add(post: Post): Post {

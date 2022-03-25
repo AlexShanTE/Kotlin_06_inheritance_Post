@@ -1,3 +1,5 @@
+import attachments.Attachment
+import attachments.AudioAttachment
 import org.junit.Test
 import org.junit.Assert.*
 
